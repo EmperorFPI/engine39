@@ -13931,7 +13931,8 @@ public function wallet_send_donation($page_id, $amount)
   } */
   /* check viewer balance */
   if ($this->_data['user_wallet_balance'] < $amount) {
-    throw new Exception(__("Your current wallet balance is") . " " . print_money($this->_data['user_wallet_balance']) . "</strong>, " . __("Recharge your wallet to continue"));
+    $wallet_url = $system['system_url'] . '/wallet';
+    throw new Exception(__("Your current wallet balance is") . " " . print_money($this->_data['user_wallet_balance']) . "</strong>, " . __("Recharge your wallet to continue <a href='" . $wallet_url . "'>Recharge</a>"));
   }
   /* decrease viewer user wallet balance */
   $db->query(sprintf('UPDATE users SET user_wallet_balance = IF(user_wallet_balance-%1$s<=0,0,user_wallet_balance-%1$s) WHERE user_id = %2$s', secure($amount), secure($this->_data['user_id'], 'int'))) or _error('SQL_ERROR_THROWEN');
