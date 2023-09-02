@@ -221,15 +221,15 @@
       <div class="profile-tabs-wrapper d-flex justify-content-evenly">
         <a href="{$system['system_url']}/pages/{$spage['page_name']}" {if $view == ""}class="active" {/if}>
           {include file='__svg_icons.tpl' icon="newsfeed" class="main-icon mr5" width="24px" height="24px"}
-          {__("Timeline")}
+          {__("News")}
         </a>
         <a href="{$system['system_url']}/pages/{$spage['page_name']}/photos" {if $view == "photos" || $view == "albums" || $view == "album"}class="active" {/if}>
           {include file='__svg_icons.tpl' icon="photos" class="main-icon mr5" width="24px" height="24px"}
-          {__("Photos")}
+          {__("Media")}
         </a>
         <a href="{$system['system_url']}/pages/{$spage['page_name']}/videos" {if $view == "videos"}class="active" {/if}>
-          {include file='__svg_icons.tpl' icon="videos" class="main-icon mr5" width="24px" height="24px"}
-          {__("Videos")}
+          {include file='__svg_icons.tpl' icon="bank" class="main-icon mr5" width="24px" height="24px"}
+          {__("Financials")}
         </a>
         {if $spage['i_like']}
           <a href="{$system['system_url']}/pages/{$spage['page_name']}/invites" {if $view == "invites"}class="active" {/if}>
@@ -697,8 +697,8 @@
                 <div class="card-header with-icon">
                   <!-- panel title -->
                   <div class="mb20">
-                    {include file='__svg_icons.tpl' icon="videos" class="main-icon mr10" width="24px" height="24px"}
-                    {__("Videos")}
+                    {include file='__svg_icons.tpl' icon="bank" class="main-icon mr10" width="24px" height="24px"}
+                    {__("Financials")}
                   </div>
                   <!-- panel title -->
                 </div>
@@ -717,7 +717,7 @@
                     <!-- see-more -->
                   {else}
                     <p class="text-center text-muted mt10">
-                      {$spage['page_title']} {__("doesn't have videos")}
+                      {$spage['page_title']} {__("- No financials available")}
                     </p>
                   {/if}
                 </div>

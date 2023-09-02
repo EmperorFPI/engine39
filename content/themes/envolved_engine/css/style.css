@@ -8677,8 +8677,8 @@ body.night-mode .profile-name-wrapper {
  */    padding-top: 0;
     padding-bottom: 0;
     text-align: left;
-    font-size: 1.9em;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+    font-size: 2em;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.9);
   }
 
   .no-avatar .profile-name-wrapper {
@@ -8701,7 +8701,7 @@ body.night-mode .profile-name-wrapper a {
 
 @media (min-width: 992px) {
   .profile-name-wrapper a {
-    color: #fff;
+    color: #333;
   }
 
   .profile-name-wrapper a.badge {
